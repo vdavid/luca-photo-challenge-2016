@@ -13,7 +13,7 @@ if ($debugMode) {
 }
 
 if ((new Carbon())->gt(new Carbon('2015-12-26'))) {
-for($weekIndex = min($weekCount, 30); $weekIndex >= 0; $weekIndex--) {
+for($weekIndex = min($weekCount, 11); $weekIndex >= 0; $weekIndex--) { // Capped to 11 weeks temporarily
 ?>
 @include('challenges/week' . $weekIndex, ['weekIndex' => $weekIndex])
 <?php
